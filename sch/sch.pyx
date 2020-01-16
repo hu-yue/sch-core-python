@@ -48,6 +48,11 @@ def Polyhedron(string fname):
   cdef S_Object ret = S_Object()
   ret.impl = c_sch_private.Polyhedron(fname)
   return ret
+  
+def Cone(double a, double h):
+  cdef S_Object ret = S_Object()
+  ret.impl = c_sch_private.Cone(a, h)
+  return ret
 
 cdef class CD_Pair(object):
   def __dealloc__(self):

@@ -6,6 +6,7 @@
 #include <sch/S_Polyhedron/S_Polyhedron.h>
 #include <sch/S_Object/S_Sphere.h>
 #include <sch/STP-BV/STP_BV.h>
+#include <sch/S_Object/S_Cone.h>
 
 namespace sch
 {
@@ -57,6 +58,11 @@ namespace sch
     S_Polyhedron* s = new S_Polyhedron;
     s->constructFromFile(filename);
     return s;
+  }
+
+  S_Object* Cone(double a, double h)
+  {
+    return new S_Cone(a, h);
   }
 
 
